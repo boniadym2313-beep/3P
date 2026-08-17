@@ -1148,6 +1148,7 @@
   let modalStack=[];
   function showModal(id){
     if(!modalStack.includes(id))modalStack.push(id);
+    $(id).style.zIndex=100+modalStack.length;
     $(id).classList.remove('hidden');$('overlay').classList.remove('hidden');document.body.style.overflow='hidden';
   }
   function closeModals(){
